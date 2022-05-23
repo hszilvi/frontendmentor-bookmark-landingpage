@@ -1,0 +1,20 @@
+@import "variables";
+@import "mixins";
+@import "globals";
+@import "navbar";
+@import "banner";
+@import "features";
+@import "tabs";
+@import "download";
+@import "faq";
+@import "signup";
+@import "footer";
+@import "personal";
+
+body {
+    max-width: 374px;
+    // margin: 2rem;
+   @include breakpoint-up('large') {
+       max-width: 1440px;
+   }
+}

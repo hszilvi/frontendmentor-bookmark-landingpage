@@ -1,0 +1,72 @@
+.footer {
+    width: 100%;
+    background-color: $dark-bluishgray;   
+    @include breakpoint-up('large') {
+        height: 88px;
+    }
+    .footer__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include breakpoint-up('large') {
+            width: 1111px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding-top: 1.5rem;          
+        }
+        .footer__logo {
+            margin-top: 2rem;
+            margin-bottom: 2.5rem;
+                @include breakpoint-up('large') {
+                margin: 0;
+                }           
+        }
+        .footer__navbar {
+            display: flex;
+            flex-direction: column;
+            @include breakpoint-up('large') {
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                height: 30px;
+                margin: 0 0 0 4rem;
+            }           
+            a {
+                text-decoration: none;
+                color: #FFFFFF;
+                letter-spacing: 1.1px;
+                padding-bottom: 2rem;
+                cursor: pointer;
+                &:hover {
+                    color: $main-red;
+                }
+                @include breakpoint-up('large') {
+                    font-size: .8125rem;
+                    padding: 0 3rem 0 0;
+                    margin: 0;
+                }
+            }           
+        }
+        .footer__socials {
+            width: 130px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            @include breakpoint-up('large') {
+                margin: 0 0 0 27rem;
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: #FFF;
+                cursor: pointer;
+                &:hover {
+                    fill: $main-red;
+                }               
+            }          
+        }
+    }
+}

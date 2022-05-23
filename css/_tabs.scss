@@ -1,0 +1,207 @@
+.tab_section {
+    margin: 0 auto;
+    @include breakpoint-up('large') {
+        width: 730px;
+    }
+    .tab__menu {
+        margin-bottom: 1rem;
+        @include breakpoint-up('large') {
+            border-bottom: 1px solid $light-blue;
+            margin-bottom: 4rem;
+        }
+        .tab__menu_elements {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style-type: none;
+            width: 311px;
+            @include breakpoint-up('large') {
+                flex-direction: row;   
+                border: none;   
+                width: 730px;    
+            }
+            hr {
+                height: 1px;
+                width: 311px;
+                background: $light-blue;
+                border: none;
+                @include breakpoint-up('large') {
+                    display: none;
+                }
+            }
+            .tab {
+                text-decoration: none;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                color: $dark-bluishgray;
+                font-size: 1rem;
+                font-weight: 400;
+                text-align: center;
+                cursor: pointer;
+                border-bottom: 1px solid white;
+                @include breakpoint-up('large') {
+                    padding-left: 3.5rem;
+                    padding-right: 3.5rem;
+                    padding-bottom: 1.2rem;
+             
+                }
+                &:hover {
+                    color: $main-red;
+                }
+                &.clicked {
+                    border-bottom: 2px solid $main-red;
+                }                
+            }           
+        }
+    }  
+    .tab-content {
+        width: 374px;
+        margin: 0 0 4rem 0;
+        @include breakpoint-up('large') {
+            width: 1440px;
+            margin-left: -22rem;
+            margin-bottom: 5rem;
+        } 
+        [data-tab-content] {
+            display: none;
+        }
+        .active[data-tab-content] {
+            display: block;
+        }
+        .slide__bookmark, .slide__searching, .slide__sharing {
+            width: 311px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            @include breakpoint-up('large') {
+                width: 1440px;
+                height: 445px;
+                flex-direction: row;
+                align-items: center;
+            }
+            .banner {
+                position: relative;
+                height: 180px;
+                width: 375px;
+                @include breakpoint-up('large') {
+                    width: 705px;
+                    height: 445px;
+                    margin: 0;
+                }
+                .monitor {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    @include breakpoint-up('large') {
+                        width: 536px;
+                        margin-left: 10.3rem;
+                    }
+                }
+                #searching__monitor {
+                    width: 311px;
+                    left: 2rem;
+                    top: -1rem;
+                    @include breakpoint-up('large') {
+                        top: 0;
+                        left: 4rem;
+                        width: 468px;
+                        margin-left: 10.3rem;
+                    }
+                }
+                #sharing__monitor {
+                    width: 311px;
+                    left: 2rem;
+                    top: -2rem;
+                    @include breakpoint-up('large') {
+                        top: 0;
+                        left: 4rem;
+                        width: 440px;
+                        margin-left: 10.3rem;
+                    }
+                }
+                .rec {
+                    position: absolute;
+                    top: 2.5rem;
+                    left: 0;
+                    margin-left: -2rem;
+                    z-index: -2;
+                    @include breakpoint-up('large') {
+                        height: 352px;
+                        margin: 0;
+                        top: 4rem;
+                    }
+                }
+            }  
+            .text {
+                width: 311px;
+                margin: 2rem auto;
+                padding-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                @include breakpoint-up('large') {
+                    width: 705px;
+                    height: 300px;
+                    padding-right: 165px;
+                    padding-left: 8rem;
+                    align-items: flex-start;
+                    align-content: stretch;
+                }
+                h3 {
+                font-size: 1.5rem;
+                text-align: center;
+                color: $dark-bluishgray;
+                font-weight: 500;
+                letter-spacing: -0.09375px;
+                    @include breakpoint-up('large') {
+                        font-size: 2rem;
+                        line-height: 3.25rem;
+                        width: 442px;
+                        text-align: left;
+                        margin: 0;
+                    }
+                }
+                p {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    font-size: .95rem;
+                    font-weight: 400;
+                    line-height: 1.5rem;
+                    color: $dark-bluishgray;
+                    opacity: .5;
+                    text-align: center;
+                    @include breakpoint-up('large') {
+                        font-size: 1.125rem;
+                        line-height: 1.75rem;
+                        width: 442px;
+                        text-align: left;
+                        margin: 1rem 0 2rem 0;
+                    }
+                }
+                button {
+                    height: 48px;
+                    width: 114px;
+                    border: none;
+                    border-radius: 5px;
+                    box-shadow: 0 5px 5px rgba(20, 20, 20, 0.1);
+                    font-size: .8rem;
+                    font-weight: 500;
+                    cursor: pointer; 
+                    background-color: $main-blue;
+                    color: #FFFFFF;
+                        @include breakpoint-up('large') {
+                            margin: 0;
+                        }
+                    &:hover {
+                        background-color: white;
+                        color: $main-blue;
+                        border: 1px solid $main-blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,128 @@
+.signup {
+    width: 100%;
+    background-color: $main-blue;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 4rem 1rem 2.5rem 1rem;
+    .signup__text {
+        p {
+        font-size: 1rem;
+        letter-spacing: 4.62px;
+        @include breakpoint-up('large') {
+            width: 408px;
+        }
+    }
+        h3 {
+            font-size: 1.5rem;
+            padding: 1rem 0 2rem 0;
+            @include breakpoint-up('large') {
+                width: 408px;
+                font-size: 2rem;
+                letter-spacing: -1px;
+                padding-top: 2rem;
+            }
+        }
+    }  
+    form {
+        display: flex;
+        flex-direction: column;
+        @include breakpoint-up('large') {
+            width: 442px;
+            display: flex;
+            flex-direction: row;
+        }    
+        .email_input_container {
+            width: 311px;
+            height: auto;
+            position: relative;
+            @include breakpoint-up('large') {
+                width: 300px;
+                margin-right: 1rem;
+            }
+            .email {
+                color: rgba(36, 42, 69, .25);
+                font-size: 1rem;
+                padding-left: .5rem;
+                height: 48px;
+                width: 311px;
+                border: 2px solid #FFFFFF;
+                border-radius: 5px;
+                margin-bottom: 1rem;             
+                @include breakpoint-up('large') {
+                    width: 300px;
+                    margin-right: 1rem;
+                }
+                &.invalid {
+                    position: absolute;
+                    width: 309px;
+                    top: 0px;
+                    left: -1px;
+                    z-index: 2;
+                    @include breakpoint-up('large') {
+                        width: 300px;
+                    }
+                }             
+            }
+            #excl_mark {
+                display: none;
+                position: absolute;
+                width: 1.5rem;
+                height: 1.5rem;
+                top: 13px;
+                right: 4px;
+                z-index: 100;
+            }
+            .wrong_email {
+                display: none;
+                width: 311px;
+                height: 70px;
+                font-size: .625rem;
+                font-style: italic;
+                color: #FFFFFF;
+                text-align: left;
+                padding-left: .5rem;
+                position: absolute;
+                border-radius: 5px;
+                top: 0;
+                padding-top: 52px;
+                position: relative;
+                z-index: 1;              
+                @include breakpoint-up('large') {
+                    width: 300px;
+                    margin-right: 1rem;
+                }
+            }
+            &.active {
+                height: 70px;
+                width: 311px;
+                background-color: $main-red;
+                border: 2px solid $main-red;
+                border-radius: 5px;
+                margin-bottom: 1rem;
+                @include breakpoint-up('large') {
+                    width: 302px;
+                }             
+            }
+        }        
+        button {
+            height: 48px;
+            width: 311px;
+            color: #FFFFFF;
+            font-size: 1rem;
+            text-align: center;
+            background-color: $main-red;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            @include breakpoint-up('large') {
+                width: 126px;
+            }
+            &:hover {
+                border: 2px solid $main-red;
+                background-color: #FFFFFF;
+                color: $main-red;
+                font-weight: 500;
+            }
+        }
+    }
+}

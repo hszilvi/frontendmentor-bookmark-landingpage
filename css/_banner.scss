@@ -1,0 +1,117 @@
+.banner {
+    margin: 4rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint-up('large') {
+        width: 1440px;
+        height: 485px;
+        margin: 4rem 0 4rem 0;
+        padding-left: 165px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #monitor_illustration {
+        position: relative;
+        width: 374px;
+        height: 285px;
+        margin-bottom: 2rem;
+        @include breakpoint-up('large') {
+            height: 485px;
+            width: 677px;
+            margin: 0;
+        }
+        #bl_monitor {
+            position: absolute;
+            margin-left: 2rem;
+            left: -2rem;
+            top: 0;
+            z-index: -1;
+            @include breakpoint-up('large') {
+                width: 695px;
+                height: 534px;
+                left: -4rem;
+                top: -1rem;
+            }
+        }
+        #rectangle {
+            position: absolute;
+            top: 4rem;
+            right: 0;
+            z-index: -2;
+            @include breakpoint-up('large') {
+                height: 352px;
+                top: 8rem;
+            }
+        }
+    }
+    .banner_paragraph {
+        margin: 0 auto;
+        width: 308px;
+        @include breakpoint-up('large') {
+            width: 540px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 1.875rem;
+            color: $dark-bluishgray;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: -0.09375px;
+            margin-bottom: 1.2rem;
+            @include breakpoint-up('large') {
+                text-align: left;
+                font-size: 3rem;
+                line-height: 3.25rem;
+            }
+        }
+        p {
+            color: $dark-bluishgray;
+            opacity: .5;
+            font-size: .95rem;
+            font-weight: 400;
+            text-align: center;
+            line-height: 1.5rem;
+            margin-bottom: 2rem;
+            @include breakpoint-up('large') {
+                text-align: left;
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+        }
+    }
+    .banner_buttons {
+        margin: 2rem 0 4rem 0;
+        button {
+            height: 48px;
+            width: 146px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 5px 5px rgba(20, 20, 20, 0.1);
+            font-size: .8rem;
+            font-weight: 500;
+            cursor: pointer;
+            @include breakpoint-up('large') {
+                width: 166px;
+            }
+        }
+        #btn_one {
+            background-color: $main-blue;
+            color: #FFFFFF;
+            &:hover {
+                background-color: white;
+                color: $main-blue;
+                border: 1px solid $main-blue;
+            }
+        }
+        #btn_two {
+            background-color: $light-blue;
+            color: $dark-bluishgray;
+            margin-left: .5rem;
+            &:hover {
+                background-color: white;
+                border: 1px solid $light-blue;
+            }
+        }
+    }
+}

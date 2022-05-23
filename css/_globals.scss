@@ -1,0 +1,22 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.3;
+    margin: 0 auto;
+    padding: 0;
+}
+.hide-for-mobile {
+    // hide for table and mobile size
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;1,100;1,400&family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Bookmark landing page</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <a href="#home" class="active_logo"><img src="images/logo-bookmark.svg" alt="Bookmark-logo"></a>
+    <!-- mobile view -->
+    <div class="hamburger_container hide-for-desktop">
+      <button class="dropdown_hamburger">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </button>
+    </div>
+    <div id="nav_content_mobile">
+      <div class="dropdown_wrapper">
+        <div class="dropdown_header">
+          <a href="#home" class="active"><img src="images/logo-bookmark-white.png" alt="Bookmark-logo"></a>
+          <button class="dropdown_hamburger_two"><img src="images/icon-close.svg" alt="closing_icon"></button>
+        </div>      
+        <div id="menu_elements"> 
+          <a href="#features">FEATURES</a>
+          <a href="#pricing">PRICING</a>
+          <a href="#contact">CONTACT</a>
+          <a href="#login">LOGIN</a>
+          <div id="socials_nav_links_mobile">
+            <a href="facebook">
+              <svg id="menu__fb"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <desc>Facebook icon</desc>
+              <path  fill-rule="evenodd" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+            </a>
+            <a href="twitter">
+              <svg id="menu__twitter" xmlns="http://www.w3.org/2000/svg" width="24" height="20">
+                <desc>Twitter icon</desc>
+                <path fill-rule="evenodd" d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> 
+   <!-- desktop view -->
+   <div class="navbar_desktop hide-for-mobile">
+     <div class="desktop_menu_elements">
+        <a href="#features">FEATURES</a>
+        <a href="#pricing">PRICING</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#login">LOGIN</a>
+     </div>   
+   </div>
+  </header>
+  <section class="banner">
+    <div id="monitor_illustration">
+      <img id="rectangle" src="images/Rectangle.png" alt="illustration-backgound" />
+      <img id="bl_monitor" src="images/lb_monitor.png" alt="illustration"/>
+    </div>
+    <div class="banner_paragraph">
+      <h1>A Simple Bookmark Manager</h1>
+      <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+      <div class="banner_buttons">
+        <button id="btn_one">Get it on Chrome</button>
+        <button id="btn_two">Get it on Firefox</button>
+      </div>
+    </div>
+  </section> 
+  <section class="features">
+    <div class="features_text">
+      <h2>Features</h2>
+      <p>Our aim is to make it quick and easy for you to access your favourite websites. 
+        Your bookmarks sync between your devices so you can access them on the go.</p>
+    </div>  
+  </section>
+<!-- tab section -->
+  <section class="tab_section">
+    <!-- tab menu -->
+    <div class="tab__menu">
+      <div class="tab__menu_elements">
+        <hr/>
+        <a class="tab" id="bookmarking" data-tab-target="#simplebookmarking">Simple Bookmarking   
+        </a>
+        <hr/>
+        <a class="tab" id="searching" data-tab-target="#speedysearching">Speedy Searching</a>
+        <hr/>
+        <a class="tab" id="sharing" data-tab-target="#easysharing">Easy Sharing</a>
+        <hr/>
+      </div>
+    </div>
+    <!-- tab content -->
+    <div class="tab-content">
+      <div id="simplebookmarking" data-tab-content class="active">
+        <div class="slide__bookmark">
+          <div class="bookmark__banner banner">
+            <img class="rec" id="bookmark__rec" src="images/bookmark_rectang.png" alt="illustration"/>
+            <img class="monitor" id="bookmark__monitor" src="images/bookmark_monitor.png" alt="illustration"/>
+          </div>
+          <div class="bookmark__text text">
+            <h3>Bookmark in one click</h3>
+            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+            <button>More Info</button>
+          </div>
+        </div>
+      </div>
+      <div id="speedysearching" data-tab-content>
+        <div class="slide__searching">
+          <div class="searching__banner banner">
+            <img class="rec" id="searching__rec" src="images/bookmark_rectang.png" alt="illustration"/>
+            <img class="monitor" id="searching__monitor" src="images/search_monitor.svg" alt="illustration"/>
+          </div>
+          <div class="searching__text text">
+            <h3>Intelligent search</h3>
+            <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+            <button>More Info</button>
+          </div>     
+        </div>
+      </div>
+      <div id="easysharing" data-tab-content="">
+        <div class="slide__sharing"> 
+          <div class="sharing__banner banner">
+            <img class="rec" id="sharing__rec" src="images/bookmark_rectang.png" alt="illustration"/>
+            <img class="monitor" id="sharing__monitor" src="images/share_monitor.svg" alt="illustration"/>
+          </div>
+          <div class="sharing__text text">
+            <h3>Share your bookmarks</h3>
+            <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+            <button>More Info</button>
+          </div>   
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- slides end -->
+  <section class="download">
+    <div class="download_text">
+      <h2>Download the extension</h2>
+      <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+        got a favourite you’d like us to prioritize.</p>
+    </div>
+    <div class="download_card_container">
+      <div class="card" id="card1">
+        <img src="images/logo-chrome.svg" alt="chrome_logo">
+        <h3>Add to Chrome</h3>
+        <p>Minimum version 62</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="280" height="4"><path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd" d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg> 
+        <button>Add & Install Extension</button>
+      </div>
+      <div class="card" id="card2">
+        <img src="images/logo-firefox.svg" alt="firefox_logo">
+        <h3> Add to Firefox</h3>
+        <p>Minimum version 55</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="280" height="4"><path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd" d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+        <button>Add & Install Extension</button>
+      </div>
+      <div class="card" id="card3">
+        <img src="images/logo-opera.svg" alt="opera_logo">
+        <h3>Add to Opera</h3>
+        <p>  Minimum version 46
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="280" height="4"><path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd" d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+        <button>Add & Install Extension</button>
+      </div>
+    </div>
+  </section>
+  <!-- faq accordion -->
+  <section class="faq">
+    <div class="faq_wrapper">
+      <div class="faq_text">
+        <h2>Frequently Asked Questions</h2>
+        <p>Here are some of our FAQs. If you have any other questions you’d like 
+          answered please feel free to email us.</p>
+      </div>
+      <div class="accordion">
+        <div class="accordion__item">
+          <button class="accordion__question">
+            What is Bookmark?
+            </button>
+          <p class="accordion__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+            justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+        </div>
+        <div class="accordion__item">
+          <button class="accordion__question"> 
+            How can I request a new browser?
+          </button>
+          <p class="accordion__p">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+        </div>
+        <div class="accordion__item">
+          <button class="accordion__question">
+            Is there a mobile app?
+          </button>
+          <p class="accordion__p"> Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+            sollicitudin ex et ultricies bibendum.</p>
+        </div>
+        <div class="accordion__item">
+          <button class="accordion__question"> 
+            What about other Chromium browsers?
+          </button>
+          <p class="accordion__p">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+            vitae neque eget nisl gravida pellentesque non ut velit.</p>
+        </div>
+      </div>
+      <button class="faq_more_button">More Info</button>
+    </div>
+  </section>
+<!-- sign up -->
+  <section class="signup">
+    <div class="signup__text">
+      <p> 35,000+ already joined</p>
+      <h3>Stay up-to-date with what we’re doing</h3>
+    </div>
+    <!-- email validation -->
+    <form id="form">
+      <div class="email_input_container">
+        <input type="text" class="email" placeholder="Enter your email address" required="">
+        <span id="excl_mark"><img src="images/excl_mark.png" alt="illustration"></span>
+        <span class="wrong_email"></span>
+      </div>
+      <button id="contact_button">Contact Us</button>
+    </form>
+  </section>
+<!-- footer -->
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a href="#home" class="footer__logo"><img src="images/footer_logo.png" alt="Bookmark-logo"></a>  
+      <div class="footer__navbar">
+        <a href="#features">FEATURES</a>
+        <a href="#pricing">PRICING</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+      <div class="footer__socials">
+        <svg id="footer__fb"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <desc>Facebook icon</desc>
+              <path  fill-rule="evenodd" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+        <svg id="footer__twitter" xmlns="http://www.w3.org/2000/svg" width="24" height="20">
+          <desc>Twitter icon</desc>
+          <path fill-rule="evenodd" d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"/></svg>
+      </div>
+    </div>
+  </footer>
+  <footer class="personal">
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Szilvia Horvath</a>.
+    </p>
+  </footer>
+  <script src="js/index.js"></script>
+</body>
+</html>

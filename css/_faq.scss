@@ -1,0 +1,110 @@
+.faq {
+    width: 374px;
+    margin-bottom: 6rem;
+    @include breakpoint-up('large') {
+        width: 540px;
+    }
+    .faq_wrapper {
+        width: 311px;
+        text-align: center;
+        @include breakpoint-up('large') {
+            width: 540px;
+        }
+        .faq_text {
+            h2 {
+                font-size: 1.5rem;
+                line-height: 1.875rem;
+                font-weight: 500;
+                color: $dark-bluishgray;
+                @include breakpoint-up('large') {
+                    font-size: 2rem;
+                }
+            }
+            p {
+                font-size: 1rem;
+                line-height: 1.5625rem;
+                color: $dark-bluishgray;
+                opacity: 0.5;
+                margin-top: 1.5rem;
+            }
+        }
+        .accordion {
+            width: 311px;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            @include breakpoint-up('large') {
+                width: 540px;
+            }
+            .accordion__item {       
+                border-bottom: 1px solid rgba(36, 42, 69, 0.15);
+                padding-bottom: 1rem;
+                padding-top: 1rem;
+                .accordion__question {
+                    display: inline-flex;
+                    justify-content: space-between;
+                    padding-top: .4rem;
+                    align-content: center;
+                    text-align: center;
+                    width: 311px;
+                    height: 32px;
+                    background: none;
+                    border: none;
+                    color: $dark-bluishgray;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    margin: 0;
+                    font-size: .95rem;
+                    @include breakpoint-up('large') {
+                        width: 540px;
+                    }
+                    cursor: pointer;
+                    &:hover {
+                        color: $main-red;
+                    }
+                    &:after {
+                        content: '';
+                        background-image: url(../images/blue_arrow.png);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        height: 1rem;
+                        width: .625rem;
+                    }                   
+                }
+                .open {
+                    &:after {
+                        background-image: url(../images/red_arrow.png);
+                    }                    
+                }
+                .accordion__p {
+                    display: none;
+                    height: auto;
+                    font-size: 1rem;
+                    line-height: 1.875rem;
+                    color: $dark-bluishgray;
+                    opacity: 0.5;
+                    margin-top: 1.5rem;
+                    text-align: left;
+                    transition: height 300ms ease;               
+                }
+            }
+        }
+        .faq_more_button {
+            height: 48px;
+            width: 114px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 5px 5px rgba(20, 20, 20, 0.1);
+            font-size: .8rem;
+            font-weight: 500;
+            cursor: pointer; 
+            background-color: $main-blue;
+            color: #FFFFFF;
+            &:hover {
+                background-color: white;
+                color: #5267DF;
+                border: 1px solid $main-blue;
+            }
+        }
+    }
+}
